@@ -46,7 +46,7 @@ class DB {
     {
         if ($conn == '') {
             // Set the first conn setting to active connection
-            $conn = reset(array_keys($this->settings));
+            $conn = array_keys($this->settings)[0];
         }
 
         if ($this->dbh[$conn]) {
